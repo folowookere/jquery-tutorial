@@ -1,1 +1,1 @@
-jQuery Tutorial - The Net Ninja
+jQuery Tutorial for Beginners - The Net Ninja

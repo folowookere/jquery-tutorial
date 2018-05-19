@@ -1,38 +1,37 @@
-//Target an element
-// $("h3").css({border: "3px solid pink"});
+//Lesson 7 | Traversing the DOM
 
-//Targeting a class
-// $(".wrapper").css({border: "3px solid purple"});
+//Next .next gives the element next in line
+$("#contact-methods").next().css({border: "3px solid red"});
 
-//Targeting an id
-// $("#clients").css({border: "3px solid magenta"});
+//Previous .prev gives the element previously in line
+// $("#social-nav").prev().css({border: "3px solid blue"});
 
-//Using first and last filter to target elements
-// $("header nav li:first").css({border: "2px solid blue"});
-// $("header nav li:last").css({border: "2px solid green"});
+//Parent .parent or .parents for all the parents of the type
 
-// //First child and last child
-// $("#contact ul:first").css({border: "3px solid yellow"});
-// $("#contact ul:last").css({border: "3px solid red"});
+//Children .children of an element
 
-//Even 
-// $("header nav li:even").css({border: "2px solid blue"});
-//Odd
-// $("header nav li:odd").css({border: "2px solid magenta"});
+//Finds the class inside an element .find
 
-//Not
-// $("section:not('#contact')").css({border: "2px solid green"});
+//Closest .closest moves up the DOM to find nearest parent of which element you want
 
-//Less than
-// $("#social-nav li:lt(3)").css({border: "2px solid blue"});
+//Lesson 8 |  *use in small doses
 
-//Greater than
-// $("#social-nav li:gt(2)").css({border: "2px solid blue"});
+// $("#contact-methods").css({border: "2px solid red"})
+//     .next().css({border: "2px solid green"})
+//     .closest("section").css({border:"2px solid blue"});
+    
+//Lesson 9 | Adding Content using jQuery
 
-//Attribute filters
-// $("div[class]").css({border: "2px solid pink"});
+var tweet = "<div style='margin:20px 0; padding: 10px; background:#eee'>The big fight live:Ham vs Cheese!</div>";
 
-//Attribute filter with specific value
-$("img[alt=quote]").css({border: "2px solid purple"});
+$("#tweets div p").text(tweet)
 
-// Check jQuery site for more selectors  http://api.jquery.com/category/selectors
+//Adding & changing content
+
+// .append() adds content to bottom of the element
+// .prepend() adds content to top of the element
+// .before() adds content before element
+// .after() adds content after element
+// .html() changes the whole html of the element
+// .text() changes the text of an element
+

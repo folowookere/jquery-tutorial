@@ -351,31 +351,24 @@ section#points-of-sale ul{
     height: 100%;
 }
 
+#tweets h2 {
+    background: green;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    width: 250px;
+    text-transform: uppercase;
+    position: relative;
+    top: -45px;
+    margin: 0 auto;
+    border-left: 16px solid #fff;
+    border-right: 16px solid #fff;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#tweets {
+    border-top: 1px solid #ccc;
+    padding-top: 30px
+}
 
 
 

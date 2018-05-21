@@ -38,7 +38,7 @@ toggleClass - toggles the class on and off on their matched element(s)
 var liPointsOfSale = $("#points-of-sale li");
     liPointsOfSale.on("click", function(){
     
-    $(this).css({"background":"pink"});
+    $(this).css({"background":"yellow"});
     
     liPointsOfSale.off("click");
     

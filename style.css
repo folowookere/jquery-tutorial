@@ -370,6 +370,10 @@ section#points-of-sale ul{
     padding-top: 30px
 }
 
+.open {
+    height:auto !important;
+}
+
 
 
 

@@ -1,37 +1,54 @@
-//Lesson 7 | Traversing the DOM
+// Lesson 10
 
-//Next .next gives the element next in line
-$("#contact-methods").next().css({border: "3px solid red"});
+/*  wrap() - wraps all matched elements individually
+    unwrap() - unwraps all matched elements
+    wrapAll() - wraps all elements combined with 1 single element
+*/
 
-//Previous .prev gives the element previously in line
-// $("#social-nav").prev().css({border: "3px solid blue"});
+// $("section").wrap("<div>");
+// $("section").unwrap();
+// $("section").wrapAll("<div>");
 
-//Parent .parent or .parents for all the parents of the type
+// var wrapper = "<div class ='wrapper'>";
+// var button = $(".button");
+// var wrapped = true;
 
-//Children .children of an element
+// button[0].onclick = function(){
+//     if (wrapped){
+//         $("section").unwrap();
+//         wrapped = false;
+//         button.text("wrap");
+//     }   else {
+//         $("section").wrapAll(wrapper);
+//         wrapped = true;
+//         button.text("unwrap");
+//     }
+// };
 
-//Finds the class inside an element .find
+//Lesson 11
 
-//Closest .closest moves up the DOM to find nearest parent of which element you want
+// $(".button").empty();
+// $("#points-of-sale").empty();
 
-//Lesson 8 |  *use in small doses
+// $(".button").remove();
+// $("#contact img").remove();
 
-// $("#contact-methods").css({border: "2px solid red"})
-//     .next().css({border: "2px solid green"})
-//     .closest("section").css({border:"2px solid blue"});
+// .empty() - empties the inner HTML of an element
+// .remove() - removes the element completely
+
+// Lesson 12
+
+console.log( $("#contact img").attr("alt"));
+ 
+
+/* 
+
+.removeAttr() removes an attribute completely
+.attr() can read or set any attribute
+
+*/
+
+
+
+
     
-//Lesson 9 | Adding Content using jQuery
-
-var tweet = "<div style='margin:20px 0; padding: 10px; background:#eee'>The big fight live:Ham vs Cheese!</div>";
-
-$("#tweets div p").text(tweet)
-
-//Adding & changing content
-
-// .append() adds content to bottom of the element
-// .prepend() adds content to top of the element
-// .before() adds content before element
-// .after() adds content after element
-// .html() changes the whole html of the element
-// .text() changes the text of an element
-

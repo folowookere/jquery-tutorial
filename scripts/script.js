@@ -1,62 +1,41 @@
-//Lesson 22 - Sliding elements
+//Lesson 25 - Plugins
 
 $(document).ready(function(){
     
-    $(".slide-button-up").on("click", function(){
-        
-        //Toggles animations up or down
-        $("#lead-banner").slideToggle(1000, function(){
-            alert("Animation complete");
-        });
-        
-//         $("#lead-banner").slideUp(100);
-        
-
-// });
-//     $(".slide-button-down").on("click", function(){
-                
-//           $("#lead-banner").slideDown(4000, function(){
-//               alert("Animation complete");
-//         });
-    });
-});
-
-//Lesson 23 - Fading animations
-
-$(document).ready(function(){
-    
-    var allQuotes = $("blockquote");
-    var currentQuote = 0;
-    
-    function changeQuote() {
-        $(allQuotes[currentQuote]).fadeOut(500, function(){
-            
-             //If currentQuote is equal to 2 then go back to the first one
-          if(currentQuote == allQuotes.length - 1){
-            currentQuote = 0;
-        } else {
-            currentQuote++;
-        }
-        
-        $(allQuotes[currentQuote]).fadeIn(500);
-        });
-      
-    }
-    
-    var quoteTimer = setInterval(changeQuote, 3000);
+        $(".rslides").responsiveSlides();
     
 });
 
-//Lesson 24 - Sliding aninmation example
+//Lesson 26 - What's Next
 
-$(document).ready(function(){
-    
-    var items = $("#points-of-sale li");
-    
-    items.on("click", function() {
-        
-    $(this).find("p").slideToggle(500);
-    });
-    
-});
+/* jQuery UI
 
+-Helps us easily make improvements to user interactions, great
+for desktop & mobile apps and websites
+
+- Datepickers
+- Draggable elements
+- Sortable elements
+- Resizeable elements
+- Loads more
+
+* jQuery Projects
+- Experiment with jQuery to create new cool interactivity
+on your web page.
+
+    - Sliders
+    - Tooltips
+    - Expandable lists
+    - Image galleries
+
+* jQuery with AJAX (Asynchronous Javascript and XML)
+
+-Communicate with a server and load data into a page without refreshing
+
+    - Google maps
+    - Traffic updates
+    
+* jQuery Plugins
+
+    - Other great plugins available
+    - How to create your own plugins for jQuery */

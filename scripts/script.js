@@ -1,53 +1,43 @@
-//Lesson 13 - CSS with jQuery
-//Check the css value of a certain element
-// console.log($("#social-nav").css("top"));
+//Lesson 16 - Event helpers
 
-//Passing object into method for css, easier to maintain & manage than long chains
-/* 
-$("#social-nav").css( {
-    "top" : "-400px",
-    "left" : "150",
-    "opacity" : "0.5",
-    "border-top" : "4px solid red"
-});
-*/
-
-// Lesson 14 - Adding and Removing Classes
-
-var button = $("#lead-banner a");
-
-/* every time button "View our work" is clicked it toggles class open in css file
-button[0].onclick = function() {
-    $("#points-of-sale").toggleClass("open");
-    return false;  
-    this negates default behavior, button won't go anywhere
-};
-
-// $("header .wrapper").removeClass("wrapper");
-// $("header > div").addClass("wrapper");
-
-
-removeClass() - removes a class from the matched element(s)
-addClass() - adds a class to the matched element(s)
-toggleClass - toggles the class on and off on their matched element(s)
-*/
-
-// Lesson 15 - Binding & Unbinding Events
-
-
-var liPointsOfSale = $("#points-of-sale li");
-    liPointsOfSale.on("click", function(){
-    
-    $(this).css({"background":"yellow"});
-    
-    liPointsOfSale.off("click");
-    
+$("#lead-banner").on("dblclick", function() {
+    alert("You double clicked me");
+    $("#lead-banner").off("dblclick"); //Can only be clicked once
 });
 
-/*
+//Lesson 17 - Document Ready & Window Load Events
+//when scripts are at top of the page, or can use it just to make sure things are loaded first
 
-on() - binds an event to matched element(s)
-off() - unbinds event from matched element(s)
+//when document is ready run what's inside
 
-Site with types of events that can be listened for https://www.w3schools.com/jquery/jquery_ref_events.asp
-*/
+// $(document).ready(function() {
+    
+// });
+
+// //or
+
+// $(function() {
+    
+// });
+
+// //window is ready
+
+// $(window).load(function() {
+    
+    
+    
+// });
+
+//Lesson 18 - The event object in jQuery 
+
+$(document).ready(function() {
+    
+   $("*").on("click", function(e) {
+       console.log(e.target);
+       console.log("The event type is " + e.type);
+       console.log("The x coordinate of the event is: " + e.pageX);
+       console.log("The y coordinate of the event is: " + e.pageY);
+       e.stopPropagation();
+       
+    });
+});
